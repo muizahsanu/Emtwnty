@@ -4,51 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/merahDasar"
     tools:context=".WalkthrougActivity">
 
+    <LinearLayout
+        android:id="@+id/lin_header_walkthrough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:text="Emtwnty"
+            android:textColor="#fafafa"
+            android:textSize="36sp"
+            android:fontFamily="@font/font_homework">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_skip_walkthrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="Skip"
+            android:textColor="#fafafa"
+            android:textSize="24sp"
+            android:fontFamily="@font/font_homework">
+        </TextView>
+
+    </LinearLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_walkthrough_walkthrough"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lin_header_walkthrough"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-    <TextView
-        android:id="@+id/tv_skip_walkthrough"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Skip"
-        android:textSize="24sp"
-        android:fontFamily="@font/font_homework"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-    </TextView>
-    <TextView
-        android:id="@+id/tv_next_walkthrough"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next >"
-        android:textSize="24sp"
-        android:fontFamily="@font/font_homework"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-    </TextView>
-    <TextView
-        android:id="@+id/tv_back_walkthrough"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textSize="24sp"
-        android:fontFamily="@font/font_homework"
-        android:layout_marginBottom="32dp"
-        android:layout_marginStart="32dp"
-        android:visibility="gone"
+        android:orientation="horizontal"
+        android:paddingEnd="32dp"
+        android:paddingStart="32dp"
+        android:paddingBottom="32dp"
+        android:paddingTop="16dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-    </TextView>
+        <Button
+            android:id="@+id/tv_back_walkthrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Back"
+            android:textSize="24sp"
+            android:textColor="#fafafa"
+            android:fontFamily="@font/font_homework"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible">
+        </Button>
+        <Button
+            android:id="@+id/tv_next_walkthrough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next >"
+            android:background="@android:color/transparent"
+            android:textSize="24sp"
+            android:textColor="#fafafa"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/font_homework">
+        </Button>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

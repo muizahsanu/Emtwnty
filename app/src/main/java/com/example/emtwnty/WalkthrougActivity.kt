@@ -22,7 +22,7 @@ class WalkthrougActivity : AppCompatActivity() {
     }
     private fun getItem(i: Int): Int{
         if(vp_walkthrough_walkthrough.currentItem+i == 0){
-            tv_back_walkthrough.visibility = View.GONE
+            tv_back_walkthrough.visibility = View.INVISIBLE
         }
         else {
             tv_back_walkthrough.visibility = View.VISIBLE
