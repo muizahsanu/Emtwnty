@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Emtwnty</string>
+
+    <!--  Splash Activity  -->
+    <string name="str_greeting_splashActivity">With The Best Music</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

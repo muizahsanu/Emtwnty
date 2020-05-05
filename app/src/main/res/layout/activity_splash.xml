@@ -22,7 +22,7 @@
         android:id="@+id/tv_greeting_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="With The Best Music"
+        android:text="@string/str_greeting_splashActivity"
         android:textSize="24sp"
         android:textColor="#fafafa"
         android:fontFamily="@font/font_homework"
