@@ -1,0 +1,45 @@
+package com.example.emtwnty.Adapter
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.emtwnty.Model.FriendsList
+import com.example.emtwnty.R
+import kotlinx.android.synthetic.main.recycler_item_friends.view.*
+
+class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+    private var items:List<FriendsList> = ArrayList()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.recycler_item_friends,parent,false)
+        )
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when(holder){
+            is ViewHolder ->
+                holder.bindFriendsList(items.get(position))
+        }
+    }
+
+    override fun getItemCount(): Int {
+        return items.size
+    }
+
+    fun friendListAdapter(friendsListModel: List<FriendsList>){
+        items = friendsListModel
+    }
+
+    class ViewHolder constructor(
+        itemView:View
+    ): RecyclerView.ViewHolder(itemView){
+        val nama = itemView.tv_nama_friends
+        val image = itemView.iv_profile_friends
+        fun bindFriendsList(friendsList: FriendsList){
+            nama.text = friendsList.nama
+            image.setImageResource(friendsList.image)
+        }
+    }
+
+}

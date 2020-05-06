@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/merahDasar"
-    tools:context=".HomeActivity">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#f3f3f3"
-        android:elevation="@dimen/cardview_compat_inset_shadow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu">
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment"
+    android:background="@color/merahDasar">
 
     <LinearLayout
         android:id="@+id/lin_profile_home"
@@ -32,7 +20,6 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="82dp"
             android:layout_height="82dp"
-
             android:src="@drawable/me">
         </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
@@ -40,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Muiz Ahsanu Haqi"
             android:textSize="24sp"
-            android:textColor="#f3f3f3">
+            android:textColor="@color/whiteSecond">
         </TextView>
         <TextView
             android:layout_width="wrap_content"
@@ -49,7 +36,7 @@
             android:textAlignment="center"
             android:text="I Just Love My Self"
             android:textSize="14sp"
-            android:textColor="#99F3F3F3">
+            android:textColor="#99DEDEDE">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -63,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lin_profile_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +118,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#dedede">
+                android:background="#CACACA">
             </View>
         </LinearLayout>
         <LinearLayout
@@ -157,7 +144,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#dedede">
+                android:background="#CACACA">
             </View>
         </LinearLayout>
         <LinearLayout
@@ -183,7 +170,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#dedede">
+                android:background="#CACACA">
             </View>
         </LinearLayout>
         <LinearLayout
@@ -209,7 +196,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#dedede">
+                android:background="#CACACA">
             </ImageView>
         </LinearLayout>
         <LinearLayout
@@ -235,7 +222,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#dedede">
+                android:background="#CACACA">
             </View>
         </LinearLayout>
     </LinearLayout>

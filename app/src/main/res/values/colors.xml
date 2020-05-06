@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#99B92926</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="merahDasar">#B92926</color>
+    <color name="merahDasar">#a91834</color>
     <color name="colorOnSurface">#99B92926</color>
+    <color name="whiteSecond">#fffbe7</color>
 </resources>
