@@ -4,5 +4,17 @@
     <!--  Splash Activity  -->
     <string name="str_greeting_splashActivity">With The Best Music</string>
 
+    <!-- Home -->
+    <string name="str_hobi_home">Hobi</string>
+    <string name="str_isi_hobi_home">Tidur</string>
+    <string name="str_makanan_home">Makanan Favorite</string>
+    <string name="str_isiMakanan_home">Pizza</string>
+    <string name="str_minuman_home">Minuman Favorite</string>
+    <string name="str_isiMinuman_home">Cola, Coffee</string>
+    <string name="str_interst_home">Interest</string>
+    <string name="str_isiInterest_home">Harta, Tahta, Zara</string>
+    <string name="str_citacita_home">Cita-Cita</string>
+    <string name="str_isiCitaCita_home">Software Developer</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
