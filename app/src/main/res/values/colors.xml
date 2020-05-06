@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="merahDasar">#B92926</color>
+    <color name="colorOnSurface">#99B92926</color>
 </resources>
