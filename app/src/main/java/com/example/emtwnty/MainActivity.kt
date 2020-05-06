@@ -10,10 +10,13 @@ import com.example.emtwnty.Fragments.DailyFragment
 import com.example.emtwnty.Fragments.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-/* 5 Mei 2020
-* Nama: Muiz Ahsanu Haqi
-* Kelas: IF-5
-* Nim: 10117199 */
+/** -Tanggal Pengerjaan:
+*  - 5 Mei 2020
+*  - 7 Mei 2020
+*  Nama : Muiz Ahsanu Haqi
+*  Kelas: IF-5
+*  NIM  : 10117199
+* */
 
 class MainActivity : AppCompatActivity() {
 

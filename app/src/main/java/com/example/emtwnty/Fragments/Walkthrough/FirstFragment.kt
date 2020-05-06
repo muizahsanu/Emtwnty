@@ -10,9 +10,12 @@ import android.view.ViewGroup
 import com.example.emtwnty.R
 import kotlinx.android.synthetic.main.fragment_first.view.*
 
-/**
- * A simple [Fragment] subclass.
- */
+/** -Tanggal Pengerjaan:
+ *  - 7 Mei 2020
+ *  Nama : Muiz Ahsanu Haqi
+ *  Kelas: IF-5
+ *  NIM  : 10117199
+ * */
 class FirstFragment : Fragment() {
 
     override fun onCreateView(

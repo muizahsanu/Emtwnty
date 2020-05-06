@@ -7,6 +7,15 @@ import com.example.emtwnty.Fragments.Walkthrough.FirstFragment
 import com.example.emtwnty.Fragments.Walkthrough.SecondFragment
 import com.example.emtwnty.Fragments.Walkthrough.ThirdFragment
 
+/** -Tanggal Pengerjaan:
+ *  - 5 Mei 2020
+ *  - 6 Mei 2020
+ *  - 7 Mei 2020
+ *  Nama : Muiz Ahsanu Haqi
+ *  Kelas: IF-5
+ *  NIM  : 10117199
+ * */
+
 class PagerAdapter(fragAdapter: FragmentManager): FragmentPagerAdapter(
     fragAdapter, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
 

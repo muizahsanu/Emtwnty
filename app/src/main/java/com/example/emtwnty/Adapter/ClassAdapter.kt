@@ -8,6 +8,13 @@ import com.example.emtwnty.Model.FriendsList
 import com.example.emtwnty.R
 import kotlinx.android.synthetic.main.recycler_item_friends.view.*
 
+/** -Tanggal Pengerjaan:
+ *  - 7 Mei 2020
+ *  Nama : Muiz Ahsanu Haqi
+ *  Kelas: IF-5
+ *  NIM  : 10117199
+ * */
+
 class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     private var items:List<FriendsList> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
