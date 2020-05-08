@@ -42,10 +42,12 @@ class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     class ViewHolder constructor(
         itemView:View
     ): RecyclerView.ViewHolder(itemView){
-        val nama = itemView.tv_nama_friends
+        val namaPanjang = itemView.tv_namaPanjang_friends
+        val namaPanggilan = itemView.tv_namaPanggilan_friends
         val image = itemView.iv_profile_friends
         fun bindFriendsList(friendsList: FriendsList){
-            nama.text = friendsList.nama
+            namaPanjang.text = friendsList.nama_lengkap
+            namaPanggilan.text = friendsList.nama_panggilan
             image.setImageResource(friendsList.image)
         }
     }

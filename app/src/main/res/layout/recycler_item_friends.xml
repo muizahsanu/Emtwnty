@@ -21,16 +21,33 @@
             android:layout_width="48dp"
             android:layout_height="48dp">
         </de.hdodenhof.circleimageview.CircleImageView>
-        <TextView
-            android:id="@+id/tv_nama_friends"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama"
-            android:textSize="24sp"
-            android:textColor="@color/whiteSecond"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp">
-        </TextView>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_namaPanjang_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Panjang"
+                android:textSize="24sp"
+                android:textColor="@color/whiteSecond"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp">
+            </TextView>
+            <TextView
+                android:id="@+id/tv_namaPanggilan_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Panggilan"
+                android:textSize="16sp"
+                android:textColor="@color/whiteSecond"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp">
+            </TextView>
+
+        </LinearLayout>
     </LinearLayout>
 
 

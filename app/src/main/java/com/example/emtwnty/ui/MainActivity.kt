@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var menu: Menu = bottom_nav.menu
+        val menu: Menu = bottom_nav.menu
         selectedMenu(menu.getItem(0))
         bottom_nav.setOnNavigationItemSelectedListener{
             item: MenuItem -> selectedMenu(item)
