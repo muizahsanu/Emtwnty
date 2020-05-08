@@ -1,4 +1,4 @@
-package com.example.emtwnty.Fragments.Walkthrough
+package com.example.emtwnty.ui.Walkthrough
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

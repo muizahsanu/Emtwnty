@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/merahDasar"
-    tools:context=".Fragments.DailyFragment">
+    tools:context=".ui.fragments.DailyFragment">
 
     <LinearLayout
         android:id="@+id/lin_friendslist_daily"

@@ -1,4 +1,4 @@
-package com.example.emtwnty.Fragments
+package com.example.emtwnty.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.emtwnty.Adapter.ClassAdapter
-import com.example.emtwnty.Model.FriendsList
-import com.example.emtwnty.Model.FriendsListSetData
+import com.example.emtwnty.persistence.FriendsListSetData
 
 import com.example.emtwnty.R
 import kotlinx.android.synthetic.main.fragment_daily.*
@@ -25,7 +24,8 @@ class DailyFragment : Fragment() {
     private lateinit var classAdapter: ClassAdapter
 
     companion object{
-        fun getInstance() : DailyFragment = DailyFragment()
+        fun getInstance() : DailyFragment =
+            DailyFragment()
     }
 
     override fun onCreateView(

@@ -1,4 +1,4 @@
-package com.example.emtwnty.Model
+package com.example.emtwnty.persistence
 
 import com.example.emtwnty.R
 

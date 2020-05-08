@@ -1,4 +1,4 @@
-package com.example.emtwnty
+package com.example.emtwnty.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,9 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.emtwnty.Fragments.DailyFragment
-import com.example.emtwnty.Fragments.HomeFragment
+import com.example.emtwnty.R
+import com.example.emtwnty.ui.fragments.DailyFragment
+import com.example.emtwnty.ui.fragments.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 /** -Tanggal Pengerjaan:

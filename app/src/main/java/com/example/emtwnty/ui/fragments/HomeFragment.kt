@@ -1,4 +1,4 @@
-package com.example.emtwnty.Fragments
+package com.example.emtwnty.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.emtwnty.R
-import kotlinx.android.synthetic.main.fragment_home.view.*
 
 /** -Tanggal Pengerjaan:
 *   - 7 Mei 2020
@@ -19,7 +18,8 @@ import kotlinx.android.synthetic.main.fragment_home.view.*
 class HomeFragment : Fragment() {
 
     companion object{
-        fun getInstance() : HomeFragment = HomeFragment()
+        fun getInstance() : HomeFragment =
+            HomeFragment()
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

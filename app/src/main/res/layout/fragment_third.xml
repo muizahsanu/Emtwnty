@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/merahDasar"
-    tools:context=".Fragments.Walkthrough.ThirdFragment">
+    tools:context=".ui.Walkthrough.ThirdFragment">
 
     <TextView
         android:layout_width="match_parent"

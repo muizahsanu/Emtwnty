@@ -3,9 +3,9 @@ package com.example.emtwnty.Adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.emtwnty.Fragments.Walkthrough.FirstFragment
-import com.example.emtwnty.Fragments.Walkthrough.SecondFragment
-import com.example.emtwnty.Fragments.Walkthrough.ThirdFragment
+import com.example.emtwnty.ui.Walkthrough.FirstFragment
+import com.example.emtwnty.ui.Walkthrough.SecondFragment
+import com.example.emtwnty.ui.Walkthrough.ThirdFragment
 
 /** -Tanggal Pengerjaan:
  *  - 5 Mei 2020
@@ -19,7 +19,7 @@ import com.example.emtwnty.Fragments.Walkthrough.ThirdFragment
 class PagerAdapter(fragAdapter: FragmentManager): FragmentPagerAdapter(
     fragAdapter, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
 
-    // List yang menampung Fragments
+    // List yang menampung ui
     private val pages = listOf(
         FirstFragment(),
         SecondFragment(),

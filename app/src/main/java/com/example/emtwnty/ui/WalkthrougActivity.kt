@@ -1,9 +1,10 @@
-package com.example.emtwnty
+package com.example.emtwnty.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.emtwnty.Adapter.PagerAdapter
+import com.example.emtwnty.R
 import kotlinx.android.synthetic.main.activity_walkthroug.*
 
 /** -Tanggal Pengerjaan:

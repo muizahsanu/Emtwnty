@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/merahDasar"
-    tools:context=".WalkthrougActivity">
+    tools:context=".ui.WalkthrougActivity">
 
     <LinearLayout
         android:id="@+id/lin_header_walkthrough"
