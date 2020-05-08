@@ -1,4 +1,4 @@
-package com.example.emtwnty.persistence
+package com.example.emtwnty.Model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,11 +11,10 @@ import androidx.room.PrimaryKey
  *  NIM  : 10117199
  * */
 
-@Entity(tableName = "friendslist")
-data class FriendsList(
+@Entity(tableName = "daily")
+data class DailyActivty(
     @PrimaryKey
     val id: Int,
-    val nama_lengkap: String,
-    val nama_panggilan: String,
-    val image: Int
+    val judul_aktivitas: String,
+    val waktu_aktivitas: String
 )
