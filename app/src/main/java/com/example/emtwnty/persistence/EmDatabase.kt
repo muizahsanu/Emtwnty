@@ -4,11 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.emtwnty.Model.Daily
+import com.example.emtwnty.persistence.onDailyFragment.DailyDao
+import com.example.emtwnty.persistence.onDailyFragment.FriendsList
+import com.example.emtwnty.persistence.onDailyFragment.FriendsListDao
 
-@Database(entities = [FriendsList::class],version = 1)
+/** -Tanggal Pengerjaan:
+ *  - 8 mei 2020
+ *  - 9 mei 2020
+ *  Nama : Muiz Ahsanu Haqi
+ *  Kelas: IF-5
+ *  NIM  : 10117199
+ * */
+
+@Database(entities = [FriendsList::class,Daily::class],version = 2)
 abstract class EmDatabase:RoomDatabase() {
 
     abstract fun friendsListDao(): FriendsListDao
+    abstract fun dailyDaon(): DailyDao
 
     companion object{
         @Volatile

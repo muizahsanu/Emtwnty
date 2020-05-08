@@ -87,6 +87,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_daily_daily"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/full_rounded_layout"

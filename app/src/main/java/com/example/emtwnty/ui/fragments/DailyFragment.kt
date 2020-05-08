@@ -2,7 +2,6 @@ package com.example.emtwnty.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,22 +10,17 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.emtwnty.Adapter.ClassAdapter
-import com.example.emtwnty.persistence.DataDummy.FriendsListSetData
 
 import com.example.emtwnty.R
+import com.example.emtwnty.persistence.DataDummy.FriendsListSetData
 import com.example.emtwnty.persistence.EmDatabase
-import com.example.emtwnty.persistence.FriendsList
 import com.example.emtwnty.ui.viewmodel.DailyViewModel
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_daily.*
-import kotlinx.android.synthetic.main.fragment_daily.view.*
 
 /** -Tanggal Pengerjaan:
  *  - 7 Mei 2020
  *  - 8 mei 2020
+ *  - 9 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -37,7 +31,6 @@ class DailyFragment : Fragment() {
     private var viewModel: DailyViewModel? = null
     private lateinit var classAdapter: ClassAdapter
     private lateinit var db: EmDatabase
-    private var friendsList: List<FriendsList> = ArrayList()
 
     companion object{
         fun getInstance() : DailyFragment =
@@ -54,32 +47,49 @@ class DailyFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
         viewModel = ViewModelProviders.of(this).get(DailyViewModel::class.java)
         db = EmDatabase.getInstance(context)
         viewModel?.setInstanceOfDb(db)
     }
 
-    override fun onStart() {
-        super.onStart()
-        viewModel?.getAllDataFriendsList()
-        initRecyclerView()
-        observeViewModel()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        getDataFriendsList()
+        getDataDaily()
     }
 
-    private fun initRecyclerView(){
-        rv_friendlist_daily.apply {
-            layoutManager = LinearLayoutManager(context)
-            classAdapter = ClassAdapter()
-        }
-    }
-    private fun observeViewModel(){
+    /** FUNGSI **/
+    private fun getDataFriendsList(){
+        viewModel?.getAllDataFriendsList()
         viewModel?.friendsList?.observe(this, Observer {
-            handleData(it)
+            rv_friendlist_daily.apply {
+                layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+                classAdapter = ClassAdapter()
+                classAdapter.friendListAdapter(it)
+                this.adapter = classAdapter
+            }
         })
     }
-    private fun handleData(data: List<FriendsList>){
-        classAdapter.friendListAdapter(data)
-        rv_friendlist_daily.adapter = classAdapter
+    private fun getDataDaily() {
+        viewModel?.getAllDataDaily()
+        viewModel?.daily?.observe(this, Observer {
+            rv_daily_daily.apply {
+                layoutManager = LinearLayoutManager(context)
+                classAdapter = ClassAdapter()
+                classAdapter.dailyAdapter(it)
+                this.adapter = classAdapter
+            }
+        })
+    }
+
+    private fun setDataToDatabase(){
+        val dataDummyFriends = FriendsListSetData.createDataSet()
+        viewModel?.setDataFriendsList(dataDummyFriends)
+
+        val dataDummyDaily = FriendsListSetData.dailyDataSet()
+        viewModel?.setDataDaily(dataDummyDaily)
     }
 
 }
