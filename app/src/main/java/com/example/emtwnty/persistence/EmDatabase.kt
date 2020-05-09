@@ -8,20 +8,24 @@ import com.example.emtwnty.Model.Daily
 import com.example.emtwnty.persistence.onDailyFragment.DailyDao
 import com.example.emtwnty.persistence.onDailyFragment.FriendsList
 import com.example.emtwnty.persistence.onDailyFragment.FriendsListDao
+import com.example.emtwnty.persistence.onGalleryFragment.GalleryDao
+import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
 
 /** -Tanggal Pengerjaan:
  *  - 8 mei 2020
  *  - 9 mei 2020
+ *  - 10 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
  * */
 
-@Database(entities = [FriendsList::class,Daily::class],version = 2)
+@Database(entities = [FriendsList::class,Daily::class,GalleryEntity::class],version = 3)
 abstract class EmDatabase:RoomDatabase() {
 
     abstract fun friendsListDao(): FriendsListDao
     abstract fun dailyDaon(): DailyDao
+    abstract fun galleryDao(): GalleryDao
 
     companion object{
         @Volatile

@@ -3,11 +3,13 @@ package com.example.emtwnty.persistence.DataDummy
 import com.example.emtwnty.Model.Daily
 import com.example.emtwnty.R
 import com.example.emtwnty.persistence.onDailyFragment.FriendsList
+import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
 
 /** -Tanggal Pengerjaan:
  *  - 7 Mei 2020
  *  - 8 mei 2020
  *  - 9 mei 2020
+ *  - 10 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -43,6 +45,18 @@ class FriendsListSetData {
             list.add(
                 Daily(4,"Mengerjakan Tugas","7:30 PM")
             )
+            return list
+        }
+        fun galleryDataSet(): ArrayList<GalleryEntity>{
+            val list = ArrayList<GalleryEntity>()
+            list.add(
+                GalleryEntity(1,"https://i.ibb.co/4dnB6yb/553-5532812-bungo-stray-dogs-do-dazai-hd-png-download.png")
+            )
+            list.add(GalleryEntity(2,"https://i.ibb.co/PDLWJtJ/naruto.png"))
+            list.add(GalleryEntity(3,"https://i.ibb.co/4ms8pWL/1529036384203.jpg"))
+            list.add(GalleryEntity(4,"https://i.ibb.co/t2NqXCV/wp2382610.jpg"))
+            list.add(GalleryEntity(5,"https://i.ibb.co/Q93nYFZ/MTBMB-book5.jpg"))
+            list.add(GalleryEntity(6,"https://i.ibb.co/WfGvs4g/EUMLx-NXWAAE6-Vf-I.jpg"))
             return list
         }
     }

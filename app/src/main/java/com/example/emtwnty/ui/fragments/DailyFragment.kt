@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_daily.*
  *  - 7 Mei 2020
  *  - 8 mei 2020
  *  - 9 mei 2020
+ *  - 10 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -56,6 +57,8 @@ class DailyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setDaily()
+        setDataToDatabase()
         getDataFriendsList()
         getDataDaily()
     }
@@ -87,7 +90,8 @@ class DailyFragment : Fragment() {
     private fun setDataToDatabase(){
         val dataDummyFriends = FriendsListSetData.createDataSet()
         viewModel?.setDataFriendsList(dataDummyFriends)
-
+    }
+    private fun setDaily(){
         val dataDummyDaily = FriendsListSetData.dailyDataSet()
         viewModel?.setDataDaily(dataDummyDaily)
     }

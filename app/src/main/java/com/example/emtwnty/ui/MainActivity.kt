@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.emtwnty.R
 import com.example.emtwnty.ui.fragments.DailyFragment
+import com.example.emtwnty.ui.fragments.GalleryFragment
 import com.example.emtwnty.ui.fragments.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 *  - 5 Mei 2020
 *  - 7 Mei 2020
  *  - 8 mei 2020
+ *  - 10 mei 2020
 *  Nama : Muiz Ahsanu Haqi
 *  Kelas: IF-5
 *  NIM  : 10117199
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.home_menu -> selectedFragment(HomeFragment.getInstance())
             R.id.daily_menu -> selectedFragment(DailyFragment.getInstance())
+            R.id.gallery_menu -> selectedFragment(GalleryFragment.getInstance())
         }
     }
     fun selectedFragment(fragment: Fragment){
