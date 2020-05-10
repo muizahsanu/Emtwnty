@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.emtwnty.Adapter.ClassAdapter
 
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.DataDummy.FriendsListSetData
+import com.example.emtwnty.persistence.DataDummy.SetDataDummy
 import com.example.emtwnty.persistence.EmDatabase
 import com.example.emtwnty.ui.viewmodel.DailyViewModel
 import kotlinx.android.synthetic.main.fragment_daily.*
@@ -88,11 +88,11 @@ class DailyFragment : Fragment() {
     }
 
     private fun setDataToDatabase(){
-        val dataDummyFriends = FriendsListSetData.createDataSet()
+        val dataDummyFriends = SetDataDummy.createDataSet()
         viewModel?.setDataFriendsList(dataDummyFriends)
     }
     private fun setDaily(){
-        val dataDummyDaily = FriendsListSetData.dailyDataSet()
+        val dataDummyDaily = SetDataDummy.dailyDataSet()
         viewModel?.setDataDaily(dataDummyDaily)
     }
 

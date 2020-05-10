@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.emtwnty.Adapter.GalleryAdapter
 
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.DataDummy.FriendsListSetData
+import com.example.emtwnty.persistence.DataDummy.SetDataDummy
 import com.example.emtwnty.persistence.EmDatabase
 import com.example.emtwnty.ui.viewmodel.GalleryViewModel
 import kotlinx.android.synthetic.main.fragment_gallery.*
@@ -60,7 +60,7 @@ class GalleryFragment : Fragment() {
 
     /** FUNCTION **/
     fun setData(){
-        val dataDummy = FriendsListSetData.galleryDataSet()
+        val dataDummy = SetDataDummy.galleryDataSet()
         viewModel?.setDataGalleryToDb(dataDummy)
     }
     fun getData(){

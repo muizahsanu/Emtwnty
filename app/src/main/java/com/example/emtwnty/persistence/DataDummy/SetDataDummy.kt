@@ -15,7 +15,7 @@ import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
  *  NIM  : 10117199
  * */
 
-class FriendsListSetData {
+class SetDataDummy {
     companion object{
         fun createDataSet(): ArrayList<FriendsList>{
             val list = ArrayList<FriendsList>()

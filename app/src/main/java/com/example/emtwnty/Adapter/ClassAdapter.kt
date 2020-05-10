@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.emtwnty.Model.Daily
 import com.example.emtwnty.persistence.onDailyFragment.FriendsList
 import com.example.emtwnty.R
-import kotlinx.android.synthetic.main.recycler_item_friends.view.*
+import kotlinx.android.synthetic.main.rv_item_friends.view.*
 import kotlinx.android.synthetic.main.rv_item_daily.view.*
 import java.lang.IllegalArgumentException
 
@@ -39,7 +39,7 @@ class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType){
             FRIENDS_LIST -> ViewHolderFriendsList(
-                LayoutInflater.from(parent.context).inflate(R.layout.recycler_item_friends,parent,false)
+                LayoutInflater.from(parent.context).inflate(R.layout.rv_item_friends,parent,false)
             )
             DAILY -> ViewHolderDaily(
                 LayoutInflater.from(parent.context).inflate(R.layout.rv_item_daily,parent,false)

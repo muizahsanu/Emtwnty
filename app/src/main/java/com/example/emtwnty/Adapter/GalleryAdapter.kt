@@ -30,7 +30,7 @@ class GalleryAdapter:RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 .load(uri)
                 .resize(500,500)
                 .centerCrop()
-                .placeholder(R.drawable.imageloading)
+                .placeholder(R.drawable.loading)
                 .error(R.drawable.noimagepng)
                 .into(imageView)
         }

@@ -17,13 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@color/whiteSecond"
-            android:layout_marginEnd="8dp">
-        </View>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,22 +25,28 @@
             android:textSize="24sp">
         </TextView>
         <View
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
             android:background="@color/whiteSecond"
-            android:layout_marginStart="8dp">
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
         </View>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/button_add_costum">
+        </ImageButton>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_friendlist_daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/full_rounded_layout"
-        android:elevation="18dp"
+        android:padding="4dp"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/lin_friendslist_daily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -63,13 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/rv_friendlist_daily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@color/whiteSecond"
-            android:layout_marginEnd="8dp">
-        </View>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,12 +70,19 @@
             android:textSize="24sp">
         </TextView>
         <View
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
             android:background="@color/whiteSecond"
-            android:layout_marginStart="8dp">
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
         </View>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/button_add_costum">
+        </ImageButton>
     </LinearLayout>
 
     <LinearLayout
@@ -94,8 +93,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="18dp"
-        android:background="@drawable/full_rounded_layout"
-        android:padding="8dp"
+        android:padding="4dp"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/lin_dailyActivity_daily"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
