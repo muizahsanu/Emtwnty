@@ -4,12 +4,14 @@ import com.example.emtwnty.Model.Daily
 import com.example.emtwnty.R
 import com.example.emtwnty.persistence.onDailyFragment.FriendsList
 import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
+import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
 
 /** -Tanggal Pengerjaan:
  *  - 7 Mei 2020
  *  - 8 mei 2020
  *  - 9 mei 2020
  *  - 10 mei 2020
+ *  - 11 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -57,6 +59,14 @@ class SetDataDummy {
             list.add(GalleryEntity(4,"https://i.ibb.co/t2NqXCV/wp2382610.jpg"))
             list.add(GalleryEntity(5,"https://i.ibb.co/Q93nYFZ/MTBMB-book5.jpg"))
             list.add(GalleryEntity(6,"https://i.ibb.co/WfGvs4g/EUMLx-NXWAAE6-Vf-I.jpg"))
+            return list
+        }
+
+        fun musicVideoDataSet(): ArrayList<MusicVideoEntity>{
+            val list = ArrayList<MusicVideoEntity>()
+            list.add(MusicVideoEntity(1,"Billie Eillish - Everything I Wanted","Billie Eillish","qCTMq7xvdXU"))
+            list.add(MusicVideoEntity(2,"Chintya Gabriella - Percaya Aku","Chintya Gabriella","kEKCOKnoCqY"))
+            list.add(MusicVideoEntity(3,"Mawar De Jongh - Lebih Dari Egoku","Billie Eillish","pNnAUwWnyNg"))
             return list
         }
     }

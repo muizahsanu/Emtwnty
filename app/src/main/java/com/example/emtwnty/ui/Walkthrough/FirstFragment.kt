@@ -23,9 +23,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view:View = inflater.inflate(R.layout.fragment_first, container,false)
-        view.btnhalo.setOnClickListener(){
-            Log.d("Halo", "kepencet")
-        }
+
         return view
     }
 
