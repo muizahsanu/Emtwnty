@@ -7,6 +7,8 @@
     android:background="@color/merahDasar"
     tools:context=".ui.WalkthrougActivity">
 
+
+
     <LinearLayout
         android:id="@+id/lin_header_walkthrough"
         android:layout_width="match_parent"
@@ -26,17 +28,6 @@
             android:textSize="36sp"
             android:fontFamily="@font/font_homework">
         </TextView>
-        <TextView
-            android:id="@+id/tv_skip_walkthrough"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|center"
-            android:text="Skip"
-            android:textColor="#fafafa"
-            android:textSize="24sp"
-            android:fontFamily="@font/font_homework">
-        </TextView>
-
     </LinearLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_walkthrough_walkthrough"
@@ -47,16 +38,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabTextColor="@color/merahDasar">
-        </com.google.android.material.tabs.TabLayout>
+
 
     </androidx.viewpager.widget.ViewPager>
-
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:tabTextColor="@color/whiteSecond"
+        app:tabSelectedTextColor="@color/whiteSecond"
+        app:tabIconTint="@color/whiteSecond"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bawah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </com.google.android.material.tabs.TabLayout>
     <RelativeLayout
+        android:id="@+id/rl_bawah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -64,7 +62,7 @@
         android:paddingStart="32dp"
         android:paddingBottom="32dp"
         android:paddingTop="16dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -72,20 +70,20 @@
             android:id="@+id/tv_back_walkthrough"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+            android:background="@color/merahKedua"
             android:text="Back"
             android:textSize="24sp"
             android:textColor="#fafafa"
             android:fontFamily="@font/font_homework"
             android:layout_alignParentStart="true"
-            android:visibility="invisible">
+            android:visibility="gone">
         </Button>
         <Button
             android:id="@+id/tv_next_walkthrough"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next >"
-            android:background="@android:color/transparent"
+            android:text="Next"
+            android:background="@color/merahKedua"
             android:textSize="24sp"
             android:textColor="#fafafa"
             android:layout_alignParentEnd="true"

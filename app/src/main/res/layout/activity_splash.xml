@@ -18,6 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
     </ImageView>
+
     <TextView
         android:id="@+id/tv_greeting_splash"
         android:layout_width="wrap_content"

@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/merahDasar"
-    tools:context=".Fragments.SecondFragment">
+    tools:context=".ui.Walkthrough.ThirdFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Halo Bangsat Ini Second Fragmen" />
+        android:text="Halo Bangsat Ini Second Fragmen"
+        android:textColor="@color/whiteSecond"/>
 
 </FrameLayout>

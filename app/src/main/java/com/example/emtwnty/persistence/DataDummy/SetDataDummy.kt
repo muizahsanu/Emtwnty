@@ -66,7 +66,7 @@ class SetDataDummy {
             val list = ArrayList<MusicVideoEntity>()
             list.add(MusicVideoEntity(1,"Billie Eillish - Everything I Wanted","Billie Eillish","qCTMq7xvdXU"))
             list.add(MusicVideoEntity(2,"Chintya Gabriella - Percaya Aku","Chintya Gabriella","kEKCOKnoCqY"))
-            list.add(MusicVideoEntity(3,"Mawar De Jongh - Lebih Dari Egoku","Billie Eillish","pNnAUwWnyNg"))
+            list.add(MusicVideoEntity(3,"Mawar De Jongh - Lebih Dari Egoku","Mawar De Jongh","pNnAUwWnyNg"))
             return list
         }
     }

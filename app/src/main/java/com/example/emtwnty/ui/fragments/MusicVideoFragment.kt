@@ -102,7 +102,8 @@ class MusicVideoFragment : Fragment(), MusicVideoAdapter.onClickItemListener{
     }
 
     override fun onItemClick(musicVideo: MusicVideoEntity, position: Int) {
-        muatVideo(musicVideo.videoUri)
+        val videoId = "EgBJmlPo8Xw"
+        muatVideo(videoId)
     }
 
     override fun onItemClickTengah(musicVideo: MusicVideoEntity, position: Int) {
