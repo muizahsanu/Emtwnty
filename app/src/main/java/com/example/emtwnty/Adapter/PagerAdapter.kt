@@ -1,48 +1,55 @@
 package com.example.emtwnty.Adapter
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import com.example.emtwnty.ui.Walkthrough.FirstFragment
-import com.example.emtwnty.ui.Walkthrough.SecondFragment
-import com.example.emtwnty.ui.Walkthrough.ThirdFragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.emtwnty.R
+import com.example.emtwnty.persistence.ViewPagerModel
+import kotlinx.android.synthetic.main.vp_item_walkthrough.view.*
 
 /** -Tanggal Pengerjaan:
  *  - 5 Mei 2020
  *  - 6 Mei 2020
  *  - 7 Mei 2020
  *  - 8 mei 2020
+ *  - 13 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
  * */
 
-class PagerAdapter(fragAdapter: FragmentManager): FragmentPagerAdapter(
-    fragAdapter, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
-
-    // List yang menampung ui
-    private val pages = listOf(
-        FirstFragment(),
-        SecondFragment(),
-        ThirdFragment()
-    )
-
-    // Menentukan posisi fragment
-    override fun getItem(position: Int): Fragment {
-        return pages[position]
+class PagerAdapter(): RecyclerView.Adapter<PagerAdapter.ViewHolderPager>() {
+    private var items:List<ViewPagerModel> = ArrayList()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPager {
+        return ViewHolderPager(
+            LayoutInflater.from(parent.context).inflate(R.layout.vp_item_walkthrough,parent,false)
+        )
     }
 
-    override fun getCount(): Int {
-        return pages.size
+    override fun onBindViewHolder(holder: ViewHolderPager, position: Int) {
+        holder.bindContent(items.get(position))
     }
 
-    // Memberikan Judul/title pada setiap Fragment
-    override fun getPageTitle(position: Int): CharSequence? {
-        return when(position){
-            0 -> "First Tab"
-            1 -> "Second Tab"
-            else -> "Third Tab"
+    override fun getItemCount(): Int {
+        return items.size
+    }
+
+    fun setPagerAdapter(pagerMode: List<ViewPagerModel>){
+        items = pagerMode
+    }
+
+    class ViewHolderPager constructor(
+        view: View
+    ): RecyclerView.ViewHolder(view){
+        val title = view.vp_title
+        val desc = view.vp_desc
+        val image = view.vp_image
+
+        fun bindContent(viewPagerModel: ViewPagerModel){
+            title.text = viewPagerModel.title
+            desc.text = viewPagerModel.desc
+            image.setImageResource(viewPagerModel.image)
         }
     }
-
 }
