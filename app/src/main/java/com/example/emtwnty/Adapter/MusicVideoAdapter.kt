@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
+import com.example.emtwnty.persistence.MusicVideoEntity
 import kotlinx.android.synthetic.main.rv_item_music.view.*
 
 /** -Tanggal Pengerjaan:

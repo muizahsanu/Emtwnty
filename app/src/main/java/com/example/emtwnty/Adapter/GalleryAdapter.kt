@@ -5,12 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
+import com.example.emtwnty.persistence.GalleryEntity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.rv_item_gallery.view.*
 
 /** -Tanggal Pengerjaan:
  *  - 10 mei 2020
+ *  - 14 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199

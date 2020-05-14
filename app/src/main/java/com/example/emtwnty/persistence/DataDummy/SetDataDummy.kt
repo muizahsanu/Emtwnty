@@ -1,10 +1,10 @@
 package com.example.emtwnty.persistence.DataDummy
 
-import com.example.emtwnty.Model.Daily
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.onDailyFragment.FriendsList
-import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
-import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
+import com.example.emtwnty.persistence.Daily
+import com.example.emtwnty.persistence.FriendsList
+import com.example.emtwnty.persistence.GalleryEntity
+import com.example.emtwnty.persistence.MusicVideoEntity
 
 /** -Tanggal Pengerjaan:
  *  - 7 Mei 2020

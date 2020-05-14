@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.emtwnty.Model.Daily
-import com.example.emtwnty.persistence.onDailyFragment.FriendsList
 import com.example.emtwnty.R
+import com.example.emtwnty.persistence.Daily
+import com.example.emtwnty.persistence.FriendsList
 import kotlinx.android.synthetic.main.rv_item_friends.view.*
 import kotlinx.android.synthetic.main.rv_item_daily.view.*
 import java.lang.IllegalArgumentException
@@ -15,6 +15,7 @@ import java.lang.IllegalArgumentException
  *  - 7 Mei 2020
  *  - 8 mei 2020
  *  - 9 mei 2020
+ *  - 14 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199

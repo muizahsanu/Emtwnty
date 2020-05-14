@@ -2,18 +2,10 @@ package com.example.emtwnty.ui.fragments
 
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
-import android.graphics.Point
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.util.Log
-import android.view.Display
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebChromeClient
-import android.webkit.WebSettings
-import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -22,8 +14,7 @@ import com.example.emtwnty.Adapter.MusicVideoAdapter
 import com.example.emtwnty.R
 import com.example.emtwnty.persistence.DataDummy.SetDataDummy
 import com.example.emtwnty.persistence.EmDatabase
-import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
-import com.example.emtwnty.ui.MainActivity
+import com.example.emtwnty.persistence.MusicVideoEntity
 import com.example.emtwnty.ui.PlayVideoActivity
 import com.example.emtwnty.ui.viewmodel.MusicVideoViewModel
 import kotlinx.android.synthetic.main.fragment_music_video.*

@@ -4,14 +4,6 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.emtwnty.Model.Daily
-import com.example.emtwnty.persistence.onDailyFragment.DailyDao
-import com.example.emtwnty.persistence.onDailyFragment.FriendsList
-import com.example.emtwnty.persistence.onDailyFragment.FriendsListDao
-import com.example.emtwnty.persistence.onGalleryFragment.GalleryDao
-import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
-import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoDao
-import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
 
 /** -Tanggal Pengerjaan:
  *  - 8 mei 2020

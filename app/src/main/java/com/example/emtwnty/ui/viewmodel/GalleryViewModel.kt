@@ -3,7 +3,7 @@ package com.example.emtwnty.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.emtwnty.persistence.EmDatabase
-import com.example.emtwnty.persistence.onGalleryFragment.GalleryEntity
+import com.example.emtwnty.persistence.GalleryEntity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -11,6 +11,7 @@ import io.reactivex.schedulers.Schedulers
 
 /** -Tanggal Pengerjaan:
  *  - 10 mei 2020
+ *  - 14 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
