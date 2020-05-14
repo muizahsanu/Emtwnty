@@ -7,6 +7,7 @@ import androidx.room.Query
 
 /** -Tanggal Pengerjaan:
  *  - 14 mei 2020
+ *  - 15 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -44,4 +45,12 @@ interface MusicVideoDao {
     fun insertMusivFav(musicVideo: List<MusicVideoEntity>)
     @Query("select * from musicVideo")
     fun getAllDataMusicVideo(): List<MusicVideoEntity>
+}
+
+@Dao
+interface ProfileDao{
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertProfile(profile: List<ProfileEntity>)
+    @Query("select * from profile")
+    fun getDataProfile(): List<ProfileEntity>
 }

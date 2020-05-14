@@ -1,10 +1,7 @@
 package com.example.emtwnty.persistence.DataDummy
 
 import com.example.emtwnty.R
-import com.example.emtwnty.persistence.Daily
-import com.example.emtwnty.persistence.FriendsList
-import com.example.emtwnty.persistence.GalleryEntity
-import com.example.emtwnty.persistence.MusicVideoEntity
+import com.example.emtwnty.persistence.*
 
 /** -Tanggal Pengerjaan:
  *  - 7 Mei 2020
@@ -13,6 +10,7 @@ import com.example.emtwnty.persistence.MusicVideoEntity
  *  - 10 mei 2020
  *  - 11 mei 2020
  *  - 14 Mei 2020
+ *  - 15 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -69,6 +67,23 @@ class SetDataDummy {
             list.add(MusicVideoEntity(1,"Billie Eillish - Everything I Wanted","Billie Eillish","qCTMq7xvdXU"))
             list.add(MusicVideoEntity(2,"Chintya Gabriella - Percaya Aku","Chintya Gabriella","kEKCOKnoCqY"))
             list.add(MusicVideoEntity(3,"Mawar De Jongh - Lebih Dari Egoku","Mawar De Jongh","pNnAUwWnyNg"))
+            return list
+        }
+
+        fun profileDataSet(): ArrayList<ProfileEntity>{
+            val list = ArrayList<ProfileEntity>()
+            list.add(
+                ProfileEntity(
+                    1,
+                    "Muiz Ahsanu Haqi",
+                    R.drawable.me,
+                    "Aku ganteng seperti justin biber, kaya seperti Bill Gates, pinter seperti Maudy Ayunda",
+                    "087823604892",
+                    "muizahsanu@gmail.com",
+                    "link instagram",
+                    "link map"
+                )
+            )
             return list
         }
     }

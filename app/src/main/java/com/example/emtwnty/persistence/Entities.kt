@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 
 /** -Tanggal Pengerjaan:
  *  - 14 mei 2020
+ *  - 15 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -41,4 +42,17 @@ data class MusicVideoEntity(
     val judulMusic: String,
     val penyanyi: String,
     val videoUri: String
+)
+
+@Entity(tableName = "profile")
+data class ProfileEntity(
+    @PrimaryKey
+    val id: Int,
+    val nama: String,
+    val profileImage: Int,
+    val descDiri: String,
+    val phoneNumber: String,
+    val email: String,
+    val instagram: String,
+    val mapDir: String
 )
