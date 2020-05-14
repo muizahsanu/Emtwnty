@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.rv_item_music.view.*
 
 /** -Tanggal Pengerjaan:
  *  - 11 Mei 2020
+ *  - 14 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -53,9 +54,6 @@ class MusicVideoAdapter:RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             title.text = musicVideo.judulMusic
             penyanyi.text = musicVideo.penyanyi
 
-            itemView.setOnClickListener{
-                clickListener.onItemClickTengah(musicVideo,adapterPosition)
-            }
             itemView.btn_play_music.setOnClickListener {
                 clickListener.onItemClick(musicVideo,adapterPosition)
             }
@@ -64,7 +62,6 @@ class MusicVideoAdapter:RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     interface onClickItemListener{
         fun onItemClick(musicVideo: MusicVideoEntity, position: Int)
-        fun onItemClickTengah(musicVideo: MusicVideoEntity, position: Int)
     }
 
 }

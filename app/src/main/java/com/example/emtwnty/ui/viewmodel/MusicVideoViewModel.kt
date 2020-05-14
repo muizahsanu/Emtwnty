@@ -12,6 +12,7 @@ import io.reactivex.schedulers.Schedulers
 
 /** -Tanggal Pengerjaan:
  *  - 11 Mei 2020
+ *  - 14 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -40,9 +41,6 @@ class MusicVideoViewModel: ViewModel() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(){
                 mMusicVideo.postValue(it!!)
-                it.forEach{
-                    Log.e("Title=",it.judulMusic)
-                }
             })
     }
 }

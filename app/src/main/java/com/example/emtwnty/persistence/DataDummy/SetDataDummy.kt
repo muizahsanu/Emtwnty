@@ -12,6 +12,7 @@ import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
  *  - 9 mei 2020
  *  - 10 mei 2020
  *  - 11 mei 2020
+ *  - 14 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -49,6 +50,7 @@ class SetDataDummy {
             )
             return list
         }
+
         fun galleryDataSet(): ArrayList<GalleryEntity>{
             val list = ArrayList<GalleryEntity>()
             list.add(

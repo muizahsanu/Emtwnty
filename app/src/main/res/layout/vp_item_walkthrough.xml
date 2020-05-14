@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,6 +27,7 @@
                 android:layout_height="220dp">
             </ImageView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -53,6 +55,7 @@
                 android:textColor="@color/whiteSecond">
             </TextView>
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

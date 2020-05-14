@@ -1,6 +1,7 @@
 package com.example.emtwnty.ui.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Point
 import android.os.Bundle
@@ -22,12 +23,15 @@ import com.example.emtwnty.R
 import com.example.emtwnty.persistence.DataDummy.SetDataDummy
 import com.example.emtwnty.persistence.EmDatabase
 import com.example.emtwnty.persistence.onMusicVideoFragmet.MusicVideoEntity
+import com.example.emtwnty.ui.MainActivity
+import com.example.emtwnty.ui.PlayVideoActivity
 import com.example.emtwnty.ui.viewmodel.MusicVideoViewModel
 import kotlinx.android.synthetic.main.fragment_music_video.*
 
 
 /** -Tanggal Pengerjaan:
  *  - 11 Mei 2020
+ *  - 14 Mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -38,8 +42,6 @@ class MusicVideoFragment : Fragment(), MusicVideoAdapter.onClickItemListener{
     private var viewModel: MusicVideoViewModel? = null
     private lateinit var db: EmDatabase
     private lateinit var mMusicAdapter: MusicVideoAdapter
-    private var size: Point= Point()
-    private lateinit var display: Display
 
     companion object{
         fun getInstance(): MusicVideoFragment = MusicVideoFragment()
@@ -64,25 +66,8 @@ class MusicVideoFragment : Fragment(), MusicVideoAdapter.onClickItemListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        wv_showVideo_musicVideo.apply {
-            webViewClient = WebViewClient()
-            webChromeClient = WebChromeClient()
-            settings.javaScriptCanOpenWindowsAutomatically = true
-            settings.javaScriptEnabled = true
-            settings.pluginState = WebSettings.PluginState.ON
-            settings.defaultFontSize = 18
-        }
-
         setData()
         getData()
-    }
-
-    fun muatVideo(videoUri: String){
-        val mWidth = Resources.getSystem().displayMetrics.widthPixels / 3
-        val mHeight = mWidth / 1.5
-        val kodeHtml = "<iframe width=\""+mWidth+"\" height=\""+mHeight+"\" src=\"https://www.youtube.com/embed/" + videoUri +
-                "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
-        wv_showVideo_musicVideo.loadData(kodeHtml,"text/html; charset=utf-8",null)
     }
 
     fun setData(){
@@ -102,12 +87,10 @@ class MusicVideoFragment : Fragment(), MusicVideoAdapter.onClickItemListener{
     }
 
     override fun onItemClick(musicVideo: MusicVideoEntity, position: Int) {
-        val videoId = "EgBJmlPo8Xw"
-        muatVideo(videoId)
-    }
-
-    override fun onItemClickTengah(musicVideo: MusicVideoEntity, position: Int) {
-
+        val videoId = musicVideo.videoUri
+        val intent = Intent(context,PlayVideoActivity::class.java)
+        intent.putExtra("ID_YT",videoId)
+        startActivity(intent)
     }
 
 }
