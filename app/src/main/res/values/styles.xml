@@ -11,10 +11,10 @@
 <!--    </style>-->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/whiteSecond</item>
+        <item name="colorPrimary">@color/merahDasar</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorOnSurface">@color/whiteSecond</item>
+        <item name="colorOnSurface">@color/merahDasar</item>
         <item name="android:fontFamily">@font/font_homework</item>
     </style>
 </resources>

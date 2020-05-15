@@ -11,6 +11,7 @@ import androidx.room.RoomDatabase
  *  - 10 mei 2020
  *  - 11 mei 2020
  *  - 15 Mei 2020
+ *  - 16 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -21,7 +22,7 @@ import androidx.room.RoomDatabase
     Daily::class,
     GalleryEntity::class,
     MusicVideoEntity::class,
-    ProfileEntity::class],version = 5)
+    ProfileEntity::class],version = 6)
 
 abstract class EmDatabase:RoomDatabase() {
 

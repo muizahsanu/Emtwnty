@@ -1,5 +1,6 @@
 package com.example.emtwnty.Adapter
 
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ import java.lang.IllegalArgumentException
  *  - 8 mei 2020
  *  - 9 mei 2020
  *  - 14 mei 2020
+ *  - 16 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -23,6 +25,8 @@ import java.lang.IllegalArgumentException
 
 class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     private var items:List<Any> = ArrayList()
+
+    private lateinit var mClickListener: onClickItemListener
 
     companion object{
         private const val FRIENDS_LIST = 0
@@ -57,7 +61,7 @@ class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
             }
             DAILY ->{
                 val dailyHolder = holder as ViewHolderDaily
-                dailyHolder.bindDaily(items[position] as Daily)
+                dailyHolder.bindDaily(items[position] as Daily, mClickListener)
             }
             else -> throw IllegalArgumentException("Undefined view type")
         }
@@ -70,8 +74,9 @@ class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     fun friendListAdapter(friendsListModel: List<FriendsList>){
         items = friendsListModel
     }
-    fun dailyAdapter(daily: List<Daily>){
+    fun dailyAdapter(daily: List<Daily>,clickListener: onClickItemListener){
         items = daily
+        mClickListener = clickListener
     }
 
     class ViewHolderFriendsList constructor(
@@ -92,10 +97,27 @@ class ClassAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     ): RecyclerView.ViewHolder(view){
         val judulAktivitas = view.tv_namaAktivitas_rvDaily
         val waktuAktivitas = view.tv_waktuAktivitas_rvDaily
-        fun bindDaily(daily: Daily){
+        val checkBox = view.btn_check_itemsDaily
+
+        fun bindDaily(daily: Daily, clickListener: onClickItemListener){
             judulAktivitas.text = daily.judul_aktivitas
             waktuAktivitas.text = daily.waktu_aktivitas
+
+            if(daily.check == "false"){
+                checkBox.setImageResource(R.drawable.ic_checkbox_uncompletedp)
+            }
+            else{
+                checkBox.setImageResource(R.drawable.ic_check_box_black_24dp)
+            }
+
+            itemView.btn_check_itemsDaily.setOnClickListener {
+                clickListener.onItemClick(daily,adapterPosition)
+            }
         }
+    }
+
+    interface onClickItemListener{
+        fun onItemClick(daily: Daily, position: Int)
     }
 
 }

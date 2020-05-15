@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:maxWidth="220dp"
             android:textAlignment="center"
-            android:text="I Just Love My Self"
+            android:text="Saya adalah mahasiswa di Universitas Komputer Indonesia yang bercita-cita menjadi Software Developers. Saya seorang perfectionist dan selalu negative thinking"
             android:textSize="14sp"
             android:textColor="#99DEDEDE">
         </TextView>

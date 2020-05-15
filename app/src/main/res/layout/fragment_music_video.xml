@@ -1,106 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/merahDasar"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.MusicVideoFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/lin_videoPlayer_musicVideo"
+            android:id="@+id/lin_musicfav_musicVideo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center"
-            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/whiteSecond"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
-            </View>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Video Player"
+                android:text="Music Favorite"
                 android:textColor="@color/whiteSecond"
                 android:textSize="28dp">
             </TextView>
+
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="@color/whiteSecond"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp">
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@color/whiteSecond">
             </View>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_weight="1"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_musicFav_musicVideo"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center">
-            <WebView
-                android:id="@+id/wv_showVideo_musicVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent">
-            </WebView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <LinearLayout
-                android:id="@+id/lin_musicfav_musicVideo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Music Favorite"
-                    android:textColor="@color/whiteSecond"
-                    android:textSize="28dp">
-                </TextView>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="@color/whiteSecond"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp">
-                </View>
-            </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_musicFav_musicVideo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </androidx.recyclerview.widget.RecyclerView>
-        </LinearLayout>
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

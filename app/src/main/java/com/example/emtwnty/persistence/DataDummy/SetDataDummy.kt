@@ -11,6 +11,7 @@ import com.example.emtwnty.persistence.*
  *  - 11 mei 2020
  *  - 14 Mei 2020
  *  - 15 Mei 2020
+ *  - 16 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -27,7 +28,7 @@ class SetDataDummy {
                 FriendsList(2,"Iqbal Atma","Bale",R.drawable.iqbal)
             )
             list.add(
-                FriendsList(3,"Annisa Salsabilla","Ann",R.drawable.pukis)
+                FriendsList(3,"Annisa Salsabilla","Ann",R.drawable.sabil)
             )
             return list
         }
@@ -35,16 +36,16 @@ class SetDataDummy {
         fun dailyDataSet():ArrayList<Daily>{
             val list = ArrayList<Daily>()
             list.add(
-                Daily(1,"Solat Subuh","4:30 AM")
+                Daily(1,"Solat Subuh","4:30 AM","true")
             )
             list.add(
-                Daily(2,"Olahraga","7:00 AM")
+                Daily(2,"Olahraga","7:00 AM","false")
             )
             list.add(
-                Daily(3,"Sarapan","9:00 AM")
+                Daily(3,"Sarapan","9:00 AM","false")
             )
             list.add(
-                Daily(4,"Mengerjakan Tugas","7:30 PM")
+                Daily(4,"Mengerjakan Tugas","7:30 PM","false")
             )
             return list
         }
@@ -77,10 +78,10 @@ class SetDataDummy {
                     1,
                     "Muiz Ahsanu Haqi",
                     R.drawable.me,
-                    "Aku ganteng seperti justin biber, kaya seperti Bill Gates, pinter seperti Maudy Ayunda",
+                    "Saya adalah mahasiswa di Universitas Komputer Indonesia yang bercita-cita menjadi Software Developers. Saya seorang perfectionist dan selalu negative thinking",
                     "087823604892",
                     "muizahsanu@gmail.com",
-                    "link instagram",
+                    "muiz.ahsanu",
                     "link map"
                 )
             )

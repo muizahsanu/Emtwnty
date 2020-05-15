@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 /** -Tanggal Pengerjaan:
  *  - 14 mei 2020
  *  - 15 Mei 2020
+ *  - 16 mei 2020
  *  Nama : Muiz Ahsanu Haqi
  *  Kelas: IF-5
  *  NIM  : 10117199
@@ -16,7 +17,8 @@ data class Daily(
     @PrimaryKey
     val id: Int,
     val judul_aktivitas: String,
-    val waktu_aktivitas: String
+    val waktu_aktivitas: String,
+    val check: String
 )
 
 @Entity(tableName = "friendslist")
